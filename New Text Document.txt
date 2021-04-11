@@ -1,0 +1,579 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local MainGui = Instance.new("ScreenGui")
+local Adios = Instance.new("Frame")
+local AdiosDust = Instance.new("TextLabel")
+local PaidExecutor = Instance.new("TextLabel")
+local Aimbot = Instance.new("TextButton")
+local X = Instance.new("TextButton")
+local PaidExecutorandfree = Instance.new("TextLabel")
+local HideName = Instance.new("TextButton")
+local BotEsp = Instance.new("TextButton")
+local Creditstoo = Instance.new("TextLabel")
+local InfiniteYield = Instance.new("TextButton")
+local DeleteAntiCheat = Instance.new("TextButton")
+local Esp = Instance.new("TextButton")
+local FastWalk = Instance.new("TextButton")
+local Norecoil = Instance.new("TextButton")
+local INFJump = Instance.new("TextButton")
+local Freecam = Instance.new("TextButton")
+local FullBright = Instance.new("TextButton")
+local OpenGui = Instance.new("Frame")
+local Open = Instance.new("TextButton")
+
+--Properties:
+
+MainGui.Parent = game.CoreGui
+
+Adios.Name = "Adios"
+Adios.Parent = MainGui
+Adios.BackgroundColor3 = Color3.fromRGB(18, 36, 16)
+Adios.BorderColor3 = Color3.fromRGB(20, 213, 213)
+Adios.BorderSizePixel = 3
+Adios.Position = UDim2.new(0.101105846, 0, 0.0250836127, 0)
+Adios.Size = UDim2.new(0, 461, 0, 568)
+Adios.Visible = false
+Adios.Active = true
+Adios.Draggable = true
+
+AdiosDust.Name = "AdiosDust"
+AdiosDust.Parent = Adios
+AdiosDust.BackgroundColor3 = Color3.fromRGB(163, 163, 163)
+AdiosDust.Size = UDim2.new(0, 461, 0, 27)
+AdiosDust.Font = Enum.Font.GothamBold
+AdiosDust.Text = "AdiosDust"
+AdiosDust.TextColor3 = Color3.fromRGB(0, 0, 0)
+AdiosDust.TextSize = 30.000
+
+PaidExecutor.Name = "Paid Executor"
+PaidExecutor.Parent = Adios
+PaidExecutor.BackgroundColor3 = Color3.fromRGB(127, 127, 127)
+PaidExecutor.Position = UDim2.new(0, 0, 0.816901386, 0)
+PaidExecutor.Size = UDim2.new(0, 461, 0, 33)
+PaidExecutor.Font = Enum.Font.GothamBold
+PaidExecutor.Text = "Paid Executors [Free Executors Won't Work]"
+PaidExecutor.TextColor3 = Color3.fromRGB(0, 0, 0)
+PaidExecutor.TextSize = 20.000
+
+Aimbot.Name = "Aimbot"
+Aimbot.Parent = Adios
+Aimbot.BackgroundColor3 = Color3.fromRGB(145, 145, 145)
+Aimbot.Position = UDim2.new(0, 0, 0.875, 0)
+Aimbot.Size = UDim2.new(0, 104, 0, 71)
+Aimbot.Font = Enum.Font.GothamBold
+Aimbot.Text = "Aimbot And Esp"
+Aimbot.TextColor3 = Color3.fromRGB(0, 0, 0)
+Aimbot.TextSize = 20.000
+Aimbot.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet("https://pastebin.com/raw/GtudyLtE"))();
+end)
+
+X.Name = "X"
+X.Parent = Adios
+X.BackgroundColor3 = Color3.fromRGB(138, 138, 138)
+X.Position = UDim2.new(0.889370918, 0, 0, 0)
+X.Size = UDim2.new(0, 51, 0, 27)
+X.Font = Enum.Font.GothamBold
+X.Text = "X"
+X.TextColor3 = Color3.fromRGB(0, 0, 0)
+X.TextSize = 20.000
+X.MouseButton1Down:connect(function()
+	Adios.Visible = false
+	OpenGui.Visible = true
+end)
+
+
+PaidExecutorandfree.Name = "Paid Executor and free"
+PaidExecutorandfree.Parent = Adios
+PaidExecutorandfree.BackgroundColor3 = Color3.fromRGB(102, 102, 102)
+PaidExecutorandfree.Position = UDim2.new(0, 0, 0.0475352108, 0)
+PaidExecutorandfree.Size = UDim2.new(0, 461, 0, 23)
+PaidExecutorandfree.Font = Enum.Font.GothamBold
+PaidExecutorandfree.Text = "Paid Executor and Free Executor"
+PaidExecutorandfree.TextColor3 = Color3.fromRGB(0, 0, 0)
+PaidExecutorandfree.TextSize = 20.000
+
+HideName.Name = "HideName"
+HideName.Parent = Adios
+HideName.BackgroundColor3 = Color3.fromRGB(159, 159, 159)
+HideName.Position = UDim2.new(0, 0, 0.0880281702, 0)
+HideName.Size = UDim2.new(0, 104, 0, 32)
+HideName.Font = Enum.Font.GothamSemibold
+HideName.Text = "HideName"
+HideName.TextColor3 = Color3.fromRGB(0, 0, 0)
+HideName.TextSize = 14.000
+HideName.MouseButton1Down:connect(function()
+	game:GetService("Players")["LocalPlayer"].PlayerGui.MainGui.Fullscreen.Inventory.ClothingFrame.PlayerName.Text = "AdiosDust"
+end)
+
+BotEsp.Name = "Bot Esp"
+BotEsp.Parent = Adios
+BotEsp.BackgroundColor3 = Color3.fromRGB(141, 141, 141)
+BotEsp.Position = UDim2.new(0.225596532, 0, 0.0880281702, 0)
+BotEsp.Size = UDim2.new(0, 116, 0, 32)
+BotEsp.Font = Enum.Font.GothamSemibold
+BotEsp.Text = "BotESP"
+BotEsp.TextColor3 = Color3.fromRGB(0, 0, 0)
+BotEsp.TextSize = 14.000
+BotEsp.MouseButton1Down:connect(function()
+	local path = game:GetService("Workspace").ScavZones.KZOutpost -- get the KZOutpost path
+
+	for i, v in pairs(path:GetDescendants()) do
+		if v.Name == 'KZ_PMC_Operator' then -- Name of the NPC
+			local bb = Instance.new("BillboardGui", v)
+			bb.Adornee = nil
+			bb.ExtentsOffset = Vector3.new(0, 1, 0)
+			bb.AlwaysOnTop = true
+			bb.Size = UDim2.new(0, 5, 0, 5)
+			bb.StudsOffset = Vector3.new(0, 3, 0)
+			bb.Name = "KZ"
+			local displayframe = Instance.new("Frame", bb)
+			displayframe.ZIndex = 10
+			displayframe.BackgroundTransparency = 1
+			displayframe.Size = UDim2.new(1, 0, 1, 0)
+
+			local name = Instance.new("TextLabel", displayframe)
+			name.Name = "Name"
+			name.ZIndex = 10
+			name.Text = "KZ_PMC_Operator"
+			name.Visible = true
+			name.TextColor3 = Color3.new(50, 166, 0)
+			name.BackgroundTransparency = 1
+			name.Size = UDim2.new(1, 0, 10, 0)
+			name.Font = Enum.Font.SourceSansLight
+			name.TextSize = 20
+			name.TextStrokeTransparency = 0
+		end
+	end
+
+	local path = game:GetService("Workspace").ScavZones.Town -- get the town path
+
+	for i, v in pairs(path:GetDescendants()) do
+		if v.Name == 'Bandit_Rifleman' then -- Name of the NPC
+			local bb = Instance.new("BillboardGui", v)
+			bb.Adornee = nil
+			bb.ExtentsOffset = Vector3.new(0, 1, 0)
+			bb.AlwaysOnTop = true
+			bb.Size = UDim2.new(0, 5, 0, 5)
+			bb.StudsOffset = Vector3.new(0, 3, 0)
+			bb.Name = "Rifleman"
+			local displayframe = Instance.new("Frame", bb)
+			displayframe.ZIndex = 10
+			displayframe.BackgroundTransparency = 1
+			displayframe.Size = UDim2.new(1, 0, 1, 0)
+
+			local name = Instance.new("TextLabel", displayframe)
+			name.Name = "Name"
+			name.ZIndex = 10
+			name.Text = "Bandit Rifleman"
+			name.Visible = true
+			name.TextColor3 = Color3.new(50, 166, 0)
+			name.BackgroundTransparency = 1
+			name.Size = UDim2.new(1, 0, 10, 0)
+			name.Font = Enum.Font.SourceSansLight
+			name.TextSize = 20
+			name.TextStrokeTransparency = 0
+		end
+	end
+
+	local path = game:GetService("Workspace").ScavZones.Hoover -- get the hoover path
+
+	for i, v in pairs(path:GetDescendants()) do
+		if v.Name == 'Bandit_Brute' then -- Name of the NPC
+			local bb = Instance.new("BillboardGui", v)
+			bb.Adornee = nil
+			bb.ExtentsOffset = Vector3.new(0, 1, 0)
+			bb.AlwaysOnTop = true
+			bb.Size = UDim2.new(0, 5, 0, 5)
+			bb.StudsOffset = Vector3.new(0, 3, 0)
+			bb.Name = "Bandit_Brute"
+			local displayframe = Instance.new("Frame", bb)
+			displayframe.ZIndex = 10
+			displayframe.BackgroundTransparency = 1
+			displayframe.Size = UDim2.new(1, 0, 1, 0)
+
+			local name = Instance.new("TextLabel", displayframe)
+			name.Name = "Name"
+			name.ZIndex = 10
+			name.Text = "Bandit_Brute"
+			name.Visible = true
+			name.TextColor3 = Color3.new(50, 166, 0)
+			name.BackgroundTransparency = 1
+			name.Size = UDim2.new(1, 0, 10, 0)
+			name.Font = Enum.Font.SourceSansLight
+			name.TextSize = 20
+			name.TextStrokeTransparency = 0
+		end
+	end
+end)
+
+Creditstoo.Name = "Credits too"
+Creditstoo.Parent = Adios
+Creditstoo.BackgroundColor3 = Color3.fromRGB(141, 141, 141)
+Creditstoo.Position = UDim2.new(0, 0, 0.757042229, 0)
+Creditstoo.Size = UDim2.new(0, 461, 0, 34)
+Creditstoo.Font = Enum.Font.GothamBold
+Creditstoo.Text = "Credits to Tested#001"
+Creditstoo.TextColor3 = Color3.fromRGB(0, 0, 0)
+Creditstoo.TextSize = 14.000
+
+InfiniteYield.Name = "Infinite Yield"
+InfiniteYield.Parent = Adios
+InfiniteYield.BackgroundColor3 = Color3.fromRGB(141, 141, 141)
+InfiniteYield.Position = UDim2.new(0.477223426, 0, 0.0880281702, 0)
+InfiniteYield.Size = UDim2.new(0, 101, 0, 32)
+InfiniteYield.Font = Enum.Font.GothamSemibold
+InfiniteYield.Text = "Infinite Yield"
+InfiniteYield.TextColor3 = Color3.fromRGB(0, 0, 0)
+InfiniteYield.TextSize = 14.000
+InfiniteYield.MouseButton1Down:connect(function()
+	loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+end)
+
+DeleteAntiCheat.Name = "Delete Anti Cheat"
+DeleteAntiCheat.Parent = Adios
+DeleteAntiCheat.BackgroundColor3 = Color3.fromRGB(157, 157, 157)
+DeleteAntiCheat.Position = UDim2.new(0.696312368, 0, 0.0880281702, 0)
+DeleteAntiCheat.Size = UDim2.new(0, 140, 0, 32)
+DeleteAntiCheat.Font = Enum.Font.GothamSemibold
+DeleteAntiCheat.Text = "Delete Anti Cheat"
+DeleteAntiCheat.TextColor3 = Color3.fromRGB(0, 0, 0)
+DeleteAntiCheat.TextSize = 14.000
+DeleteAntiCheat.MouseButton1Down:connect(function()
+	for i,v in pairs(getconnections(game:GetService("ScriptContext").Error)) do
+		v:Disable()
+	end
+	for i,v in pairs(getconnections(game:GetService("LogService").MessageOut)) do
+		v:Disable()
+	end
+
+	local rem = game.ReplicatedStorage.RemoteEvents:WaitForChild("LightTorchOLD")
+	local mt = getrawmetatable(game)
+	local backup = mt.__namecall
+	setreadonly(mt,false)
+	mt.__namecall = newcclosure(function(self,...)
+		if checkcaller() then return backup(self,...) end
+		if getnamecallmethod() == "FireServer" and self == rem then
+			local args = {...}
+			local N
+			pcall(function()
+				N = tonumber(args[1])
+			end)
+			if type(N) == "number" then
+				return
+			end
+		end
+		return backup(self,...)
+	end)
+	setreadonly(mt,true)
+
+
+
+
+	globalOldNameCall = nil
+	function disableAntiCheat(oldNamecall)
+		loadstring([[
+local rem = game.ReplicatedStorage.RemoteEvents:WaitForChild("LightTorchOLD")
+local mt = getrawmetatable(game)
+local backup = mt.__namecall
+oldNamecall = backup
+setreadonly(mt,false)
+mt.__namecall = newcclosure(function(self,...)
+    if checkcaller() then return backup(self,...) end
+    if getnamecallmethod() == "FireServer" and self == rem then
+        local args = {...}
+        local N
+        pcall(function()
+            N = tonumber(args[1])
+        end)
+        if type(N) == "number" then
+            return
+        end
+    end
+    return backup(self,...)
+end)
+setreadonly(mt,true)
+]])()
+	end
+	function reEnableAntiCheat(oldNc)
+		loadstring([[
+  local GameMt = getrawmetatable(game)    
+  setreadonly(GameMt, false)
+  GameMt .__namecall = oldNc
+  setreadonly(GameMt, true)
+]])()
+	end
+	game.Players.LocalPlayer.CharacterAdded:Connect(function()    
+		reenableAntiCheat()
+		disableAntiCheat(oldnc)
+	end)
+
+end)
+
+Esp.Name = "Esp"
+Esp.Parent = Adios
+Esp.BackgroundColor3 = Color3.fromRGB(145, 145, 145)
+Esp.Position = UDim2.new(0, 0, 0.14436619, 0)
+Esp.Size = UDim2.new(0, 104, 0, 40)
+Esp.Font = Enum.Font.GothamSemibold
+Esp.Text = "Esp"
+Esp.TextColor3 = Color3.fromRGB(0, 0, 0)
+Esp.TextSize = 14.000
+Esp.MouseButton1Down:connect(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Drippy397/gga/main/New%20Text%20Document.txt"))()
+end)
+
+FastWalk.Name = "FastWalk"
+FastWalk.Parent = Adios
+FastWalk.BackgroundColor3 = Color3.fromRGB(108, 108, 108)
+FastWalk.Position = UDim2.new(0, 0, 0.669014096, 0)
+FastWalk.Size = UDim2.new(0, 461, 0, 50)
+FastWalk.Font = Enum.Font.GothamSemibold
+FastWalk.Text = "Fast Walk [Broken]"
+FastWalk.TextColor3 = Color3.fromRGB(0, 0, 0)
+FastWalk.TextSize = 14.000
+FastWalk.MouseButton1Down:connect(function()
+	game.Workspace.LocalPlayer.Humanoid.WalkSpeed = 20
+end)
+
+Norecoil.Name = "No recoil"
+Norecoil.Parent = Adios
+Norecoil.BackgroundColor3 = Color3.fromRGB(154, 154, 154)
+Norecoil.Position = UDim2.new(0.225596532, 0, 0.14436619, 0)
+Norecoil.Size = UDim2.new(0, 116, 0, 40)
+Norecoil.Font = Enum.Font.GothamSemibold
+Norecoil.Text = "No Recoil"
+Norecoil.TextColor3 = Color3.fromRGB(0, 0, 0)
+Norecoil.TextSize = 14.000
+Norecoil.MouseButton1Down:connect(function()
+	getgenv().Settings = {
+		AutoHarvest = true, -- Hold T to auto harvest
+		NoRecoil = true,
+		Firerate = 0.1,
+		FastAimIn = 0.1,
+		FastAimOut = 0.1,
+		AimReadyTime = 0
+	}
+	loadstring(game:HttpGet("https://raw.githubusercontent.com/TestedGest/scripts/main/dust.lua", true))()
+end)
+
+INFJump.Name = "INF Jump"
+INFJump.Parent = Adios
+INFJump.BackgroundColor3 = Color3.fromRGB(163, 163, 163)
+INFJump.Position = UDim2.new(0.477223426, 0, 0.14436619, 0)
+INFJump.Size = UDim2.new(0, 101, 0, 40)
+INFJump.Font = Enum.Font.GothamSemibold
+INFJump.Text = "INF Jump"
+INFJump.TextColor3 = Color3.fromRGB(0, 0, 0)
+INFJump.TextSize = 14.000
+INFJump.MouseButton1Down:connect(function()
+	local InfiniteJumpEnabled = true
+	game:GetService("UserInputService").JumpRequest:connect(function()
+		if InfiniteJumpEnabled then
+			game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+		end
+	end)
+	local InfiniteJump = CreateButton("Infinite Jump: Off", StuffFrame)
+	InfiniteJump.Position = UDim2.new(0,10,0,130)
+	InfiniteJump.Size = UDim2.new(0,150,0,30)
+	InfiniteJump.MouseButton1Click:connect(function()
+		local state = InfiniteJump.Text:sub(string.len("Infinite Jump: ") + 1) --too lazy to count lol
+		local new = state == "Off" and "On" or state == "On" and "Off"
+		InfiniteJumpEnabled = new == "On"
+		InfiniteJump.Text = "Infinite Jump: " .. new
+	end)
+end)
+
+Freecam.Name = "Free cam"
+Freecam.Parent = Adios
+Freecam.BackgroundColor3 = Color3.fromRGB(132, 132, 132)
+Freecam.Position = UDim2.new(0, 0, 0.596830964, 0)
+Freecam.Size = UDim2.new(0, 461, 0, 41)
+Freecam.Font = Enum.Font.GothamSemibold
+Freecam.Text = "Free Cam press  = to use it and press z to go back to where you are and press left click to move faster"
+Freecam.TextColor3 = Color3.fromRGB(0, 0, 0)
+Freecam.TextSize = 9.000
+Freecam.MouseButton1Down:connect(function()
+	-- Basic Freecam Script
+	-- You can move faster by holding the click button [setting below ! :) ]
+	local allowspeedmove = true
+	wait(1)
+
+	local c = workspace.CurrentCamera
+	local player = game.Players.LocalPlayer
+	local userInput = game:GetService("UserInputService")
+	local rs = game:GetService("RunService")
+	local starterPlayer = game:GetService("StarterPlayer")
+	--local util = LoadLibrary("RbxUtility")
+	--local camSync = util.CreateSignal()
+
+	local selected = false
+	local speed = 60
+	local lastUpdate = 0
+
+	local camera = Instance.new('Part', workspace)
+	camera.CanCollide = false
+	camera.Anchored = true
+	camera.Transparency = 1
+	camera.Name = 'FreeCam'
+	camera.Position = player.Character.HumanoidRootPart.Position + Vector3.new(0,5,0)
+	--rs:BindToRenderStep("CamSync",190,function ()
+	--	camSync:fire()
+	--end)
+
+	c.Changed:connect(function (property)
+		if property == "CoordinateFrame" then
+			--		camSync:fire()
+		end
+	end)
+
+	function getNextMovement(deltaTime)
+		local nextMove = Vector3.new()
+		-- Left/Right
+		if userInput:IsKeyDown("A") or userInput:IsKeyDown("Left") then
+			nextMove = nextMove + Vector3.new(-1,0,0)
+		end
+		if userInput:IsKeyDown("D") or userInput:IsKeyDown("Right") then
+			nextMove = nextMove + Vector3.new(1,0,0)
+		end
+		-- Forward/Back
+		if userInput:IsKeyDown("W") or userInput:IsKeyDown("Up") then
+			nextMove = nextMove + Vector3.new(0,0,-1)
+		end
+		if userInput:IsKeyDown("S") or userInput:IsKeyDown("Down") then
+			nextMove = nextMove + Vector3.new(0,0,1)
+		end
+		-- Up/Down
+		if userInput:IsKeyDown("Space") or userInput:IsKeyDown("Q") then
+			nextMove = nextMove + Vector3.new(0,1,0)
+		end
+		if userInput:IsKeyDown("LeftControl") or userInput:IsKeyDown("E") then
+			nextMove = nextMove + Vector3.new(0,-1,0)
+		end
+		return CFrame.new( nextMove * (speed * deltaTime) )
+	end
+
+	function onSelected()
+		local char = player.Character
+		if char then
+			local root = camera
+			currentPos = root.Position
+			selected = true
+			lastUpdate = tick()
+			c.CameraSubject = root
+			player.Character.HumanoidRootPart.Anchored = true
+			while selected do
+				local delta = tick()-lastUpdate
+				local look = (c.Focus.p-c.CoordinateFrame.p).unit
+				local move = getNextMovement(delta)
+				local pos = root.Position
+				root.CFrame = CFrame.new(pos,pos+look) * move
+				lastUpdate = tick()
+				wait(0.01)
+				--	camSync:wait()
+			end
+			player.Character.HumanoidRootPart.Anchored = false
+			c.CameraSubject = player.Character.Humanoid
+			root.Velocity = Vector3.new()
+		end
+	end
+
+	function onDeselected()
+		selected = false
+	end
+
+	local isOn = true
+	spawn(onSelected)
+
+	function onKeyPressed(_,state)
+		if state == Enum.UserInputState.Begin then
+			isOn = not isOn
+			if isOn then
+				onSelected()
+			else
+				onDeselected()
+			end
+		end
+	end
+
+	local mouse = player:GetMouse()
+	mouse.Button1Down:Connect(function()
+		if allowspeedmove then speed = 120 end
+	end)
+	mouse.Button1Up:Connect(function()
+		speed = 60
+	end)
+
+	function ResetCamera()
+		camera.Position = player.Character.HumanoidRootPart.Position + Vector3.new(0,5,0)
+	end
+
+	game:GetService("ContextActionService"):BindAction("Noclip Toggle",onKeyPressed,false,"r")
+	game:GetService("ContextActionService"):BindAction("Reset Camera Position",ResetCamera,false,"z")
+end)
+
+FullBright.Name = "FullBright"
+FullBright.Parent = Adios
+FullBright.BackgroundColor3 = Color3.fromRGB(140, 140, 140)
+FullBright.Position = UDim2.new(0.696312368, 0, 0.14436619, 0)
+FullBright.Size = UDim2.new(0, 140, 0, 40)
+FullBright.Font = Enum.Font.GothamSemibold
+FullBright.Text = "FullBright"
+FullBright.TextColor3 = Color3.fromRGB(0, 0, 0)
+FullBright.TextSize = 14.000
+FullBright.MouseButton1Down:connect(function()
+	pcall(function()
+		local lighting = game:GetService("Lighting");
+		lighting.Ambient = Color3.fromRGB(255, 255, 255);
+		lighting.Brightness = 1;
+		lighting.FogEnd = 1e10;
+		for i, v in pairs(lighting:GetDescendants()) do
+			if v:IsA("BloomEffect") or v:IsA("BlurEffect") or v:IsA("ColorCorrectionEffect") or v:IsA("SunRaysEffect") then
+				v.Enabled = false;
+			end;
+		end;
+		lighting.Changed:Connect(function()
+			lighting.Ambient = Color3.fromRGB(255, 255, 255);
+			lighting.Brightness = 1;
+			lighting.FogEnd = 1e10;
+		end);
+		spawn(function()
+			local character = game:GetService("Players").LocalPlayer.Character;
+			while wait() do
+				repeat wait() until character ~= nil;
+				if not character.HumanoidRootPart:FindFirstChildWhichIsA("PointLight") then
+					local headlight = Instance.new("PointLight", character.HumanoidRootPart);
+					headlight.Brightness = 1;
+					headlight.Range = 60;
+				end;
+			end;
+		end);
+	end)
+end)
+
+OpenGui.Name = "OpenGui"
+OpenGui.Parent = MainGui
+OpenGui.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenGui.Position = UDim2.new(0, 0, 0.46488294, 0)
+OpenGui.Size = UDim2.new(0, 70, 0, 38)
+Open.Active = true
+Open.Draggable = true
+
+Open.Name = "Open"
+Open.Parent = OpenGui
+Open.BackgroundColor3 = Color3.fromRGB(109, 99, 108)
+Open.BorderColor3 = Color3.fromRGB(10, 12, 170)
+Open.BorderSizePixel = 3
+Open.Position = UDim2.new(0.0142857144, 0, -0.105263159, 0)
+Open.Size = UDim2.new(0, 69, 0, 42)
+Open.Font = Enum.Font.GothamSemibold
+Open.Text = "OPEN"
+Open.TextColor3 = Color3.fromRGB(254, 254, 254)
+Open.TextSize = 14.000
+Open.MouseButton1Down:connect(function()
+	OpenGui.Visible = false
+	Adios.Visible = true
+end)
