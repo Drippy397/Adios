@@ -1,0 +1,67 @@
+for i,v in pairs(getconnections(game:GetService("ScriptContext").Error)) do
+    v:Disable()
+end
+for i,v in pairs(getconnections(game:GetService("LogService").MessageOut)) do
+    v:Disable()
+end
+
+local rem = game.ReplicatedStorage.RemoteEvents:WaitForChild("LightTorchOLD")
+local mt = getrawmetatable(game)
+local backup = mt.__namecall
+setreadonly(mt,false)
+mt.__namecall = newcclosure(function(self,...)
+    if checkcaller() then return backup(self,...) end
+    if getnamecallmethod() == "FireServer" and self == rem then
+        local args = {...}
+        local N
+        pcall(function()
+            N = tonumber(args[1])
+        end)
+        if type(N) == "number" then
+            return
+        end
+    end
+    return backup(self,...)
+end)
+setreadonly(mt,true)
+
+
+
+
+globalOldNameCall = nil
+function disableAntiCheat(oldNamecall)
+loadstring([[
+local rem = game.ReplicatedStorage.RemoteEvents:WaitForChild("LightTorchOLD")
+local mt = getrawmetatable(game)
+local backup = mt.__namecall
+oldNamecall = backup
+setreadonly(mt,false)
+mt.__namecall = newcclosure(function(self,...)
+    if checkcaller() then return backup(self,...) end
+    if getnamecallmethod() == "FireServer" and self == rem then
+        local args = {...}
+        local N
+        pcall(function()
+            N = tonumber(args[1])
+        end)
+        if type(N) == "number" then
+            return
+        end
+    end
+    return backup(self,...)
+end)
+setreadonly(mt,true)
+]])()
+end
+function reEnableAntiCheat(oldNc)
+  loadstring([[
+  local GameMt = getrawmetatable(game)    
+  setreadonly(GameMt, false)
+  GameMt .__namecall = oldNc
+  setreadonly(GameMt, true)
+]])()
+end
+game.Players.LocalPlayer.CharacterAdded:Connect(function()    
+    reenableAntiCheat()
+    disableAntiCheat(oldnc)
+end)
